@@ -6,28 +6,27 @@
   text-align: center;
 }
 
-body {
+body, html {
 	background: url('macbook.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-}
-
-@media only screen and (min-device-width: 400px) {
-  body {
-	  background: url('macbook.jpg');
-	  background-size: cover;
-	  background-repeat: no-repeat;
-  }
+  background-attachment: fixed;
+  background-position: center center;
+  height: 100%;
 }
 
 .layer {
   background-color: rgba(0, 0, 0, 0.90);
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: scroll;
 }
 
 p {
