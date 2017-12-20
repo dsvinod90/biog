@@ -39,7 +39,7 @@ p {
 .para{
 	margin: 50px;
   text-align: justify;
-  padding-right: 150px;
+  padding-right: 175px;
 }
 
 .sidebar {
@@ -50,9 +50,13 @@ p {
   top: 50;
   right: 0;
   overflow-x: hidden;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-color: silver;
 }
 
 .sidebar-items {
 	text-align: left;
 	margin: 20px;
+  font-family: 'Dosis';
 }
