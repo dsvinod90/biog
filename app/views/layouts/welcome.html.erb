@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<%= stylesheet_link_tag "welcome" %>
+	</head>	
+		<div class="layer">
+  		<h1 class="heading" style="font-size: 80px;"> Vinod Dalavai </h1>
+  		<div class="sidebar">
+  			<div class="sidebar-items">
+          <%=link_to "Home", root_path %>
+          <br/><br/>	
+          <%= link_to "About me", about_me_welcome_index_path %>
+          <br/><br/>	
+  				<a href="https://github.com/dsvinod90", target="blank"> My Github Account </a>	
+  			</div>
+  		</div>
+
+  		<body>
+  			<p class="para">
+          <%= yield %>
+  			</p>
+  		</body>
+		</div>
+</html>
+

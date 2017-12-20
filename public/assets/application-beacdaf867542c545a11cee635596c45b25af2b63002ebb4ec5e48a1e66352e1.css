@@ -1,0 +1,137 @@
+@import "https://fonts.googleapis.com/css?family=Comfortaa|Dosis:300";
+
+.heading {
+  font-family: 'Comfortaa';
+  color: #4169E1;
+  text-align: center;
+}
+
+body {
+	background: url('macbook.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@media only screen and (min-device-width: 400px) {
+  body {
+	  background: url('macbook.jpg');
+	  background-size: cover;
+	  background-repeat: no-repeat;
+  }
+}
+
+.layer {
+  background-color: rgba(0, 0, 0, 0.90);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+p {
+	font-family: 'Dosis';
+	color: silver;
+	font-size: 20px;
+}
+
+.para{
+	margin: 50px;
+  text-align: justify;
+  padding-right: 150px;
+}
+
+.sidebar {
+	height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.sidebar-items {
+	text-align: left;
+	margin: 20px;
+}
+@import "https://fonts.googleapis.com/css?family=Comfortaa|Dosis:300";
+/* line 3, /Users/VinodDalavai/dev/biog/app/assets/stylesheets/welcome.css.scss */
+.heading {
+  font-family: 'Comfortaa';
+  color: #4169E1;
+  text-align: center;
+}
+
+/* line 9, /Users/VinodDalavai/dev/biog/app/assets/stylesheets/welcome.css.scss */
+body {
+  background: url(/assets/macbook-f1aeac002bbb1e308ca2d6c33ed665ed4b35c0ab31d8584012c720d40eedae25.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-device-width: 400px) {
+  /* line 16, /Users/VinodDalavai/dev/biog/app/assets/stylesheets/welcome.css.scss */
+  body {
+    background: url(/assets/macbook-f1aeac002bbb1e308ca2d6c33ed665ed4b35c0ab31d8584012c720d40eedae25.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+/* line 23, /Users/VinodDalavai/dev/biog/app/assets/stylesheets/welcome.css.scss */
+.layer {
+  background-color: rgba(0, 0, 0, 0.9);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 33, /Users/VinodDalavai/dev/biog/app/assets/stylesheets/welcome.css.scss */
+p {
+  font-family: 'Dosis';
+  color: silver;
+  font-size: 20px;
+}
+
+/* line 39, /Users/VinodDalavai/dev/biog/app/assets/stylesheets/welcome.css.scss */
+.para {
+  margin: 50px;
+  text-align: justify;
+  padding-right: 150px;
+}
+
+/* line 45, /Users/VinodDalavai/dev/biog/app/assets/stylesheets/welcome.css.scss */
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  right: 0;
+  overflow-x: hidden;
+}
+
+/* line 55, /Users/VinodDalavai/dev/biog/app/assets/stylesheets/welcome.css.scss */
+.sidebar-items {
+  text-align: left;
+  margin: 20px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
