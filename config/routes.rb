@@ -5,4 +5,5 @@ Rails.application.routes.draw do
       get :about_me
     end
   end
+  resources :blog, only: [:index]
 end
