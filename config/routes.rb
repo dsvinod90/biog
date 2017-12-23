@@ -5,5 +5,8 @@ Rails.application.routes.draw do
       get :about_me
     end
   end
-  resources :blog, only: [:index]
+  resources :articles, path: '/blog/articles'
+  devise_for :admin, controllers: {
+        sessions: 'admin/sessions'
+      }
 end
