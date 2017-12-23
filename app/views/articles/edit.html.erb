@@ -1,0 +1,22 @@
+<%=content_for :page_header do %>
+  New Article
+<% end %>
+<div style="padding-left: 50px;">
+  <%= button_to "Back to blog index", { action: 'index' }, method: :get, class: 'button'%>
+</div>
+<br>
+<%= form_with model: @article, local: true do |form| %>
+  <p class='para'>
+    <%= form.label :title %><br>
+    <%= form.text_field :title, class: 'form_title' %>
+  </p>
+ 
+  <p class="para">
+    <%= form.label :body %><br>
+    <%= form.text_area :body, class: 'textarea' %>
+  </p>
+ 
+  <p class="para">
+  <%= form.submit "Save", class: 'button' %>
+  </p>
+<% end %>

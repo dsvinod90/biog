@@ -5,16 +5,16 @@
 		<%= stylesheet_link_tag "welcome" %>
 	</head>	
 		<div class="layer">
-      <%=image_tag "dsv_logo.png", align: "right"%>
-      <ul class="topnav">
+      <%=link_to (image_tag "dsv_logo.png", align: "right"), root_path %>
+      <ul class="topnav"><strong>
         <li><%=link_to "Home", root_path %></li>
-        <li><%= link_to "Blog", blog_index_path %></li>
+        <li><%= link_to "Blog", articles_path %></li>
         <li><%= link_to "About me", about_me_welcome_index_path %></li>
         <li><a href="https://github.com/dsvinod90", target="blank"> My Github Page </a></li>
         <li><a href="https://www.linkedin.com/in/vinod-dalavai-00933459", target="blank"> My LinkedIn Profile </a></li>
-      </ul>
-  		<h1 class="heading" style="font-size: 40px;"> Vinod Dalavai </h1>
-      <br/><br/>
+      </ul></strong>
+      <h1 class="heading" style="font-size: 40px;"> <%= yield :page_header%> </h1>
+      <br/>
   		<body>
   			<p class="para">
           <%= yield %>

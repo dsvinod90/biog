@@ -1,0 +1,13 @@
+<%=content_for :page_header do %>
+  Blog
+<% end %>
+<div style="padding-left: 20px;">
+  <%= button_to "Create Article", { action: 'new' }, method: :get,  class: 'button'%>
+</div>
+<h3 style="font-family: 'Dosis'; padding-left: 20px;">
+  <% @articles.each_with_index do |article, index| %>
+    <%= index+1 %>&nbsp&nbsp
+    <%= link_to article.title, article_path(article), style: "text-decoration: none; color: black;" %>
+    <br><br>
+  <% end %>
+</h3>
