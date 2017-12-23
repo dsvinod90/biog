@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_admin!, except: [:index, :show]
+
   layout 'welcome'
 
   def index
@@ -10,7 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = Article.new
+    @article = current_admin.articles.build
   end
 
   def edit
@@ -18,7 +20,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_admin.articles.build(article_params)
     if @article.save
       redirect_to @article
     else

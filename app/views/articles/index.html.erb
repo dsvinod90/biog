@@ -2,12 +2,18 @@
   Blog
 <% end %>
 <div style="padding-left: 20px;">
-  <%= button_to "Create Article", { action: 'new' }, method: :get,  class: 'button'%>
+    <% if admin_signed_in? %>
+      <%= button_to "Create Article", { action: 'new' }, method: :get,  class: 'button'%>
+    <% end %>
 </div>
 <h3 style="font-family: 'Dosis'; padding-left: 20px;">
-  <% @articles.each_with_index do |article, index| %>
-    <%= index+1 %>&nbsp&nbsp
-    <%= link_to article.title, article_path(article), style: "text-decoration: none; color: black;" %>
-    <br><br>
+  <% if @articles.present? %>
+    <% @articles.each_with_index do |article, index| %>
+      <%= index+1 %>&nbsp&nbsp
+      <%= link_to article.title, article_path(article), style: "text-decoration: none; color: black;" %>
+      <br><br>
+    <% end %>
+  <% else %>
+    <p class="para", style="color: #737373; font-size: 30px; ">Ummm..why don't you come back some other time! :D </p>
   <% end %>
 </h3>

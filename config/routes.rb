@@ -6,4 +6,7 @@ Rails.application.routes.draw do
     end
   end
   resources :articles, path: '/blog/articles'
+  devise_for :admin, controllers: {
+        sessions: 'admin/sessions'
+      }
 end
