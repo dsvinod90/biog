@@ -1,20 +1,30 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111350027-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111350027-1');
+</script>
+
 <%= content_for :page_header do %>
 	TechNews
 <% end %>
-
-<div style="overflow-x:auto;">
-	<table>
-			<% @headlines.each do |h| %>
-				<tr>
-					<td style="width: 35%"><a href=<%= h['url'] %>, target="blank"> <img src="<%= h['urlToImage']%>"></a></td>
-					<td style="width: 65%"><%= h['description'] %></td>
-				</tr>
-			<% end %>
-	</table>
-</div><br><br>
-<div class="paginate">
-	<%= will_paginate @headlines%>
+<div class="grid-container">
+	<% @headlines.each do |h| %>
+		<div class="grid-item">
+			<img src="<%= h['urlToImage']%>" style="width:100%">
+  		<div class="container">
+    		<a href=<%= h['url']%> style="text-decoration: none; color: black;" target="blank"><h4 style="font-family: 'Dosis';"><b><%= h['title'] %></b></h4></a> 
+    		<p><%= h['description'] %></p> 
+  		</div>	
+		</div>
+	<% end %>
 </div>
 <footer>
 	<p style="text-align: center; font-size: 10px;">Powered by <a href="https://newsapi.org/", style="color: silver">News API</a></p>
 </footer>
+<div class="paginate">
+	<%= will_paginate @headlines%>
+</div>

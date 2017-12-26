@@ -8,7 +8,7 @@
 }
 
 body, html {
-	background: url('macbook.jpg');
+	background: url('macbook3.jpeg');
 	background-size: cover;
 	background-repeat: no-repeat;
   background-attachment: fixed;
@@ -48,7 +48,7 @@ ul.topnav {
     padding: 0;
     overflow: hidden;
     background-color: #F5F5F5;
-    opacity: 0.50;
+    opacity: 0.75;
 }
 
 ul.topnav li { float: left; }
@@ -98,6 +98,50 @@ ul.topnav li.right { float: right; }
           transition-duration: 0.5s;
 }
 
+.button_delete {
+  background-color: #db8a8a;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Dosis';
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 14px;
+}
+
+.button_delete:hover {
+  background-color: #cf6363;
+  color: black;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.button_edit {
+  background-color: #bee5f4;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Dosis';
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 14px;
+}
+
+.button_edit:hover {
+  background-color: #92d3ed;
+  color: black;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
 .form_title {
     width: 40%;
     padding: 12px 20px;
@@ -124,6 +168,65 @@ ul.topnav li.right { float: right; }
     border-radius: 4px;
     background-color: #f8f8f8;
     font-size: 16px;
+}
+
+.pagination {
+    font-size: 12px;
+}
+
+.pagination > * {
+    margin-right: 0.1em;
+    padding: 0.3em 0.4em;
+}
+
+.pagination a:hover {
+    background: #e6e6e6 none repeat scroll 0 0;
+    text-shadow: 1px 1px 1px #171717;
+}
+
+.pagination a:active {
+    text-shadow: none;
+}
+
+.pagination .current {
+    background: #202020 none repeat scroll 0 0;
+    color: white;
+    text-shadow: 1px 1px 1px #171717;
+}
+
+.pagination .disabled {
+    color: #C0C0C0;
+}
+
+.grid-item:hover {
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: left;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 5px;
+  float: left;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
