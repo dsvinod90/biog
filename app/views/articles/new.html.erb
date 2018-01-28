@@ -1,22 +1,19 @@
-<%=content_for :page_header do %>
+<%=content_for :page_heading do %>
   New Article
 <% end %>
-<div style="padding-left: 50px;">
-  <%= button_to "Back to blog index", { action: 'index' }, method: :get, class: 'button'%>
+<div style="margin-left: 50px;">
+  <%= button_to "Back to blog index", { action: 'index' }, method: :get, class: 'btn btn-default'%>
 </div>
 <br>
 <%= form_with scope: :article, url: articles_path, local: true do |form| %>
-  <p class='para'>
-    <%= form.label :title %><br>
-    <%= form.text_field :title, class: 'form_title' %>
-  </p>
- 
-  <p class="para">
-    <%= form.label :body %><br>
-    <%= form.text_area :body, class: 'textarea' %>
-  </p>
- 
-  <p class="para">
-  <%= form.submit "Save", class: 'button' %>
-  </p>
+  <div class="form-group" style="margin-left: 50px;">  
+    <%= form.label :title, :html => {:for => 'Title'} %><br>
+    <%= form.text_field :title, :html => {:class => 'form-control', :type => 'text'} %>
+  </div>
+  
+  <div class="form-group" style="margin-left: 50px;">  
+    <%= form.label :body, :html => {:for => 'Body'} %><br>
+    <%= form.text_area :body, :html => {:class => 'form-control', :rows => '3'} %>
+  </div>
+    <%= form.submit "Save", class: 'btn btn-success' %>
 <% end %>

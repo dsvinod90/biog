@@ -1,7 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_admin!, except: [:index, :show]
 
-  layout 'welcome'
 
   def index
     @articles = Article.all
@@ -12,7 +11,6 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = current_admin.articles.build
   end
 
   def edit
