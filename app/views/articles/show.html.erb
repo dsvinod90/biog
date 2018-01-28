@@ -1,20 +1,20 @@
 <%=content_for :page_heading do %>
   <%= @article.title %>
 <% end %>
-<div style="padding-left: 50px;">
+<div style="margin-left: 50px;">
   <div style="float:left">
     <%= button_to "Back to blog index", { action: 'index' }, method: :get, class: 'btn btn-default' %>
   </div>
   <% if admin_signed_in? %>
-    <div style="float:left; padding-left: 10px;">
+    <div style="float:left; margin-left: 10px;">
       <%= button_to "Edit this article", { action: 'edit' }, method: :get, class: 'btn btn-warning'%>
     </div>
-    <div style="float:right; padding-right: 20px;">
+    <div style="float:right; margin-right: 20px;">
       <%= button_to "Delete this article", { action: 'destroy' }, method: :delete, onClick: "return confirm('Are you sure?')", class: 'btn btn-danger'%>
     </div>
   <% end %>
 </div>
 <br><br><br>
-<p class="para">
+<p style="margin-left: 50px;">
   <%= @article.body %>
 </p>
