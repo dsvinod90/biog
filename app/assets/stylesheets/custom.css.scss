@@ -1,8 +1,10 @@
-$navbar-default-bg:   #d0d3d4;
+$navbar-default-bg:   #F2F3F4;
+
 
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Dosis');
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 body, html {
 	background: url('macbook3.jpeg');

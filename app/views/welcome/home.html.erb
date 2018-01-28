@@ -1,11 +1,8 @@
-<%= content_for :page_heading do %>
-	Vinod Dalavai
-<% end %>
-
-<p style="margin: 40px 20px 40px 20px;"> 
-	Hey there! I am Vinod and I am a Ruby on Rails developer. 
-</p>
-
-<p style="margin: 40px 20px 40px 20px;"> 
-	This is my blog where I will discuss some basics of programming mostly pertaining to Ruby. In addition to technical stuff I will also talk about general issues we all face, such as, “How to plan my day?”, “How to stay focussed?”etc,. I am no expert in any of this but it’s good to share things you get to know. I believe that the more you share the more you learn and follow. You can feel free to post your comments, views and questions here and I will not fail to answer you. Let’s learn and improve as a community! Pls visit the “About me” page to know more about me. I find a lot of people like me with the same questions in their mind as I used to have. This blog may help you.
-</p>
+<div class="row">
+	<div class="jumbotron col-md-6" style="opacity: 0.5; margin-top: 100px;">
+  	<h1 style="font-family: Comfortaa; margin-left: 30px;">Vinod Dalavai</h1>
+  	<p style="margin-left: 50px;">Ruby on Rails developer</p>
+	</div>
+	<%= image_tag 'vinod.jpg', {:class => 'img-responsive col-md-6'} %>
+	<%= link_to fa_icon("file", text:"Download Resume"), download_resume_path, {class: 'btn btn-default', style: "font-family: Dosis; font-size: 15px; margin-left: 30px; margin-top: 20px;"} %>
+</div>
