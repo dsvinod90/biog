@@ -8,12 +8,12 @@
   gtag('config', 'UA-111350027-1');
 </script>
 
-<%=content_for :page_header do %>
+<%=content_for :page_heading do %>
   Blog
 <% end %>
 <div style="padding-left: 20px;">
     <% if admin_signed_in? %>
-      <%= button_to "Create Article", { action: 'new' }, method: :get,  class: 'button'%>
+      <%= button_to "Create Article", { action: 'new' }, method: :get,  class: 'btn btn-primary'%>
     <% end %>
 </div>
 <h3 style="font-family: 'Dosis'; padding-left: 20px;">

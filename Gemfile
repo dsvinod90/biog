@@ -17,7 +17,8 @@ gem 'autoprefixer-rails'
 gem 'devise'
 gem 'httparty'
 gem 'will_paginate'
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap-sass', '~> 3.3.7'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

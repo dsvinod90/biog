@@ -9,6 +9,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="layer">
+  	  <%= render 'layouts/navigation' %>
+      <h2><%= yield :page_heading %></h2>
+      <%= yield %>
+    </div>
   </body>
 </html>
