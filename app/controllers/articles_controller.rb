@@ -20,8 +20,10 @@ class ArticlesController < ApplicationController
   def create
     @article = current_admin.articles.build(article_params)
     if @article.save
+      flash[:success] = 'Article created successfully'
       redirect_to @article
     else
+      flash.now[:danger] = 'Article could not be created. Please try again.'
       render 'new'
     end
   end
@@ -29,16 +31,22 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     if @article.update(article_params)
+      flash[:success] = 'Article updated successfully'
       redirect_to @article
     else
+      flash.now[:danger] = 'Article could not be updated. Please try again.'
       render 'edit'
     end
   end
 
   def destroy
     @article = Article.find(params[:id])
-    @article.destroy
-    redirect_to articles_path
+    if @article.destroy
+      flash[:danger] = 'Article deleted'
+      redirect_to articles_path
+    else
+      render 'show'
+    end
   end
 
   private

@@ -11,6 +11,9 @@
   <body>
     <div class="layer">
   	  <%= render 'layouts/navigation' %>
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
       <h2><%= yield :page_heading %></h2>
       <%= yield %>
     </div>
