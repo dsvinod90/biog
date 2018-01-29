@@ -13,7 +13,7 @@
   
   <div class="form-group" style="margin-left: 50px;">  
     <%= form.label :body, :html => {:for => 'Body'} %><br>
-    <%= form.text_area :body, :html => {:class => 'form-control', :rows => '3'} %>
+    <%= form.text_area :body, :html => {:class => 'form-control', :rows => '3'}, style: 'width: 60%;' %>
   </div>
   <div style="margin-left: 50px;">
     <%= form.submit "Save", class: 'btn btn-success'%>

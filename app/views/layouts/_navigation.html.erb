@@ -26,6 +26,12 @@
         <li><a href="https://github.com/dsvinod90", target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
         <li><a href="https://www.linkedin.com/in/vinod-dalavai-00933459/", target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
         <li><a href="https://www.facebook.com/ds.vinod.1", target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+        <li><%= link_to fa_icon("download", class: 'fa-2x'), download_resume_path, {:id =>"resume_download", :data => {:toggle => "tooltip"}, :title => "Download resume"} %></li>
+        <li>
+          <%= mail_to "admin@vinoddalavai.me", subject: "Hey, Vinod" do %>
+            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+          <% end %>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
