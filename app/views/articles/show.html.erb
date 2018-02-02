@@ -15,6 +15,7 @@
   <% end %>
 </div>
 <br><br><br>
-<div style="margin-left: 50px;">
+<div style="margin-left: 50px; margin-right: 20px;">
+  <p style="font-size: 12px; text-align: right; color: gray;">created on: <%= @article.created_at.strftime("%d/%m/%Y")%></p>
   <%= markdown(@article.body) %>
 </div>
