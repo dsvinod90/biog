@@ -19,3 +19,40 @@
   <p style="font-size: 12px; text-align: right; color: gray;">created on: <%= @article.created_at.strftime("%d/%m/%Y")%></p>
   <%= markdown(@article.body) %>
 </div>
+<% if @article.comments.present? %>
+  <br><br>
+  <div style="margin-left: 50px;">
+    <h4 style="font-style: Dosis;">Comments:</h4>
+    <% @article.comments.each do |c| %>
+      <p style="font-style: Dosis; font-size: 15px;">
+        <strong><%= c.name %></strong>:&nbsp&nbsp<%= c.comment %>
+      </p>
+      <% if admin_signed_in? %>
+        <div style="float:right; margin-right: 20px;">
+          <%= link_to "Delete this comment", [c.article, c], method: :delete, onClick: "return confirm('Are you sure?')" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
+<br><br>
+<div style="margin-left: 50px;">
+  <h4 style="font-style: Dosis;">Add Comments:</h4>
+  <%= form_with(model: [ @article, Comment.new ], html: {style: "font-family: Dosis;"}, local: true) do |form| %>
+    <div class="form-group">
+      <%= form.label :name, :html => {:for => 'Name'} %><br>
+      <%= form.text_field :name, :html => {:class => 'form-control', :type => 'text'} %>
+    </div>
+    <div class="form-group">
+      <%= form.label :email, :html => {:for => 'Email'} %><br>
+      <%= form.text_field :email, :html => {:class => 'form-control', :type => 'text'} %>
+    </div>
+    <div class="form-group"">
+      <%= form.label :comment, :html => {:for => 'Comment'} %><br>
+      <%= form.text_area :comment, :html => {:class => 'form-control', :rows => '3'}, style: 'width: 60%;' %>
+    </div>
+    <div style="margin-left: 50px;">
+      <%= form.submit "Save", class: 'btn btn-success'%>
+    </div>
+  <% end %>
+</div>
