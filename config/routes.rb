@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root 'welcome#home'
   get 'welcome/about', to: 'welcome#about'
   get 'download_resume', to: 'downloads#download_resume'
-  resources :articles, path: '/blog/articles'
+  resources :articles, path: '/blog/articles' do
+    resources :comments
+  end
   namespace :api do
     resources :news, only: [:index]
   end 
