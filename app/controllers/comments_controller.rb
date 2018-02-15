@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
       flash[:success] = "#{@comment.name} has successfully commented on this article"
       redirect_to article_path(@article)
       CommenterMailer.welcome_email(@comment).deliver_later
+      AdminMailer.notify_email(@comment).deliver_later
     end
 	end
 
