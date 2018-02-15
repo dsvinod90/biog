@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>
+      Welcome to <a href="https://vinoddalavai.me" target="blank" style="text-decoration: none;">Vinod's Blog</a>, <%= @commenter_name %>  
+    </h2>
+    <p>
+      You have successfully commented on an article.
+    </p>
+    <p>
+      Please find the details of your comment as follows:<br><br>
+      <strong>Article title:</strong> <%= @commented_article_title %><br>
+      <strong>Your Comment:</strong> <%= @comment_added %>
+    </p>
+    <p>Thanks for visiting my blog and providing your comments.</p>
+
+    <i>
+      Cheers!<br>
+      Vinod
+    </i>
+  </body>
+</html>
